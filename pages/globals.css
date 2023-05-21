@@ -17,6 +17,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
   /* background: linear-gradient(
       to bottom,
@@ -25,9 +26,23 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
+#navBar.scrolled {
+  background-color: #3032A2;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  /* background: linear-gradient(45deg,#0E90D5, #3032A2); */
+  transition: all 0.3s ease-in-out;
+}
+#navBar.scrolled .brand-logo {
+  width: 60px;
+  transition: all 0.3s ease-in-out;
+}
+#navBar .brand-logo {
+  width: 70px;
+  transition: all 0.3s ease-in-out;
+}
 .top-nav-bg {
   /* background: linear-gradient(to left, #f46b45, #eea849); */
-  background: white;
+  /* background: white; */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -56,7 +71,8 @@ body {
 .menu > li a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #eea849;
+  /* color: #eea849; */
+  color: white;
 }
 .menu li a:before {
   content: '';
@@ -72,11 +88,12 @@ body {
   position: relative;
   bottom: 0;
   width: 0%;
+  margin: auto;
   margin-top: 10px;
   transition: all 0.3s ease-in-out;
 }
 .menu li a:hover::after {
-  width: 100%;
+  width: 105%;
 }
 
 .menu-button-container {
@@ -190,12 +207,26 @@ body {
   }
 }
 
+.banner-bg {
+  position:fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgb(22 26 60 / 90%), #00000012),  url('/images/banner.png');
+  /* background: linear-gradient(to right, rgb(22 26 60 / 90%), #FFFFFF12), url('/images/banner.png') no-repeat; */
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+.bg-yellow {
+  background-color: rgba(251, 168, 31, 1);
+}
 .banner-holder {
-  height: 80vh;
+  height: 60vh;
   /* background: linear-gradient(to right, rgb(22 26 60 / 90%), #FFFFFF12), url('/images/banner.png'); */
   /* background: #7455ff; */
   /* background-image: linear-gradient(45deg, #0E90D5 0%, #3032A2 100%); */
-  background: linear-gradient(to right, rgb(22 26 60 / 90%), #FFFFFF12),  url('/images/banner1.jpg');
+  /* background: linear-gradient(to right, rgb(22 26 60 / 90%), #FFFFFF12),  url('/images/banner1.jpg'); */
   background-repeat: no-repeat;
   background-size: cover; 
   overflow: hidden;
@@ -204,6 +235,7 @@ body {
   color: white;
   margin-right: auto;
   padding-left: 10vw;
+  position: static;
 }
 
 .additional_img {

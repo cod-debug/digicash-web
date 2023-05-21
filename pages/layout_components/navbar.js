@@ -1,6 +1,31 @@
+import React, { useEffect } from 'react';
+
 export default function NavBar(){
+    useEffect(() => {
+        const handleScroll = () => {
+          var navbar = document.getElementById('navBar'); // Replace 'your-navbar-id' with the actual ID of your navbar
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+          if (scrollTop <= 45) {
+            setTimeout(() => {
+                navbar.classList.remove('scrolled'); // Replace 'scrolled' with the CSS class to be removed when scrolling to the top
+            }, 200)
+          } else {
+            setTimeout(() => {
+            navbar.classList.add('scrolled'); // Replace 'scrolled' with the CSS class to be added when scrolling down
+            }, 200);
+          }
+        };
+      
+        window.addEventListener('scroll', handleScroll);
+      
+        // Cleanup function to remove the event listener when the component is unmounted
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
     return (
-    <div className="w-100 top-nav-bg">
+    <div className="w-100 top-nav-bg" id="navBar">
         <section className="top-nav container mx-auto">
             <div>
                 <img src='/images/logo.png' className="brand-logo" />

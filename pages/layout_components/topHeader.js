@@ -6,7 +6,7 @@ export default function topHeader(){
         <div className='container mx-auto flex justify-between'>
             <div>
                 <i className="fa fa-map-marker"></i> 121 King Street, Melbourne 
-                <p1 className="px-4">|</p1> 
+                <b className="px-4">|</b> 
                 <i className="fa-regular fa-paper-plane"></i> sample@email.com
              </div>
              <div>

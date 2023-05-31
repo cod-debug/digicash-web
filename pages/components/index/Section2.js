@@ -32,7 +32,7 @@ export default function () {
                         }}
                     >
                         <div>
-                            <h6 className="page-subtitle text-3xs font-bold text-[#002140]">Welcome</h6>
+                            <h6 className="page-subtitle text-3xs font-bold text-[#002140]"><b className="text-[#8d949e] font-custom-sm">02.</b> Welcome</h6>
                             <div className='text-6xl fw-900'>Digicash is Digital Cash You Can Spend Anywhere</div>
                             <div className='text-secondary my-6'>Use DigiCash to make instant, private payments online or in-store using our secure open-source platform hosted by thousands of users around the world.</div>
                         </div>
